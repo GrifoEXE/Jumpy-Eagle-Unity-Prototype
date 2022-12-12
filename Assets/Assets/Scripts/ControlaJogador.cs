@@ -6,18 +6,13 @@ public class ControlaJogador : MonoBehaviour
 {
     private Rigidbody2D rb;
 
+    [SerializeField]
+    private float forcaPulo = 10;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     private void Update()
     {
         if (Input.GetButtonDown("Fire1"))
@@ -28,6 +23,6 @@ public class ControlaJogador : MonoBehaviour
 
     private void Pular()
     {
-        this.rb.AddForce(Vector2.up * 10, ForceMode2D.Impulse);
+        this.rb.AddForce(Vector2.up * this.forcaPulo, ForceMode2D.Impulse);
     }
 }
