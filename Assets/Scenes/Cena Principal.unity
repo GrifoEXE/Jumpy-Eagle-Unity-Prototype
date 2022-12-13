@@ -417,6 +417,64 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8763590619887477548, guid: bc9d00b019c4c654c8f50410742a0ff4, type: 3}
   m_PrefabInstance: {fileID: 8763590620509396411}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1544319267
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1544319269}
+  - component: {fileID: 1544319268}
+  m_Layer: 0
+  m_Name: BarreiraDestroyObstaculos
+  m_TagString: Destroy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &1544319268
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544319267}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 12.93}
+  m_EdgeRadius: 0
+--- !u!4 &1544319269
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544319267}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -13, y: -0.4066124, z: 0.17604327}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1710049811 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8586868472703064943, guid: 4dc9ace054e3e0240b302315436516d7, type: 3}
@@ -429,17 +487,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4083416090675263992, guid: 2c580202095eddd4caba0f338c7ed71a, type: 3}
-      propertyPath: m_Constraints
-      value: 4
+    - target: {fileID: 605122507252397231, guid: 2c580202095eddd4caba0f338c7ed71a, type: 3}
+      propertyPath: forcaPulo
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4083416090675263997, guid: 2c580202095eddd4caba0f338c7ed71a, type: 3}
       propertyPath: m_Name
       value: Jogador
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083416090675263998, guid: 2c580202095eddd4caba0f338c7ed71a, type: 3}
-      propertyPath: m_FlipY
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4083416090675263999, guid: 2c580202095eddd4caba0f338c7ed71a, type: 3}
       propertyPath: m_RootOrder
@@ -542,9 +596,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 0}
-    - {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dc9ace054e3e0240b302315436516d7, type: 3}
 --- !u!1001 &8763590620509396411
 PrefabInstance:

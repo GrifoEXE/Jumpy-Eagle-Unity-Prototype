@@ -7,7 +7,7 @@ public class ControlaJogador : MonoBehaviour
     private Rigidbody2D rb;
 
     [SerializeField]
-    private float forcaPulo = 10;
+    private float forcaPulo;
 
     private void Awake()
     {
@@ -23,6 +23,7 @@ public class ControlaJogador : MonoBehaviour
 
     private void Pular()
     {
+        this.rb.velocity = Vector2.zero;
         this.rb.AddForce(Vector2.up * this.forcaPulo, ForceMode2D.Impulse);
     }
 }

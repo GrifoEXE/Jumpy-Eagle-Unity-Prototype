@@ -18,4 +18,18 @@ public class ControlaObstaculo : MonoBehaviour
     {
         this.transform.Translate(Vector3.left * this.velocidadeObstaculo * Time.deltaTime);
     }
+
+    private void OnTriggerEnter2D(Collider2D trigger)
+    {
+        if (trigger.CompareTag("Destroy"))
+        {
+            this.Destruir();
+        }
+    }
+
+    private void Destruir()
+    {
+        Debug.Log("Hit");
+        Destroy(this.gameObject);
+    }
 }

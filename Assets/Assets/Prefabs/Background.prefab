@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8586868471683538117}
   - component: {fileID: 8586868471683538118}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: background-day (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8586868471700951603}
   - component: {fileID: 8586868471700951596}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: background-day
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8586868471739319047}
   - component: {fileID: 8586868471739319040}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: background-day (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8586868472643005770}
   - component: {fileID: 8586868472643005771}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: background-day (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -347,9 +347,9 @@ GameObject:
   - component: {fileID: 8586868472703064943}
   - component: {fileID: 881131806}
   - component: {fileID: 881131805}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Background
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
