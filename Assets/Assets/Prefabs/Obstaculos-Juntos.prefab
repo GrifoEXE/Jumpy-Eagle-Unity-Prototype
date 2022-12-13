@@ -46,7 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2baf54fb4cb6954ca8de4d9e7575d7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadeObstaculo: 0.01
+  velocidadeObstaculo: 5
+  variacaoPosicaoY: 1
 --- !u!1001 &4532167386159196541
 PrefabInstance:
   m_ObjectHideFlags: 0
