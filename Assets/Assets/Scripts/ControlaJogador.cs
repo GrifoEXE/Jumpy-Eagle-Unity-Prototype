@@ -1,10 +1,11 @@
-using System.Collections;
+using System.Collections; 
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ControlaJogador : MonoBehaviour
 {
     private Rigidbody2D rb;
+    private Diretor diretor;
 
     [SerializeField]
     private float forcaPulo;
@@ -12,6 +13,7 @@ public class ControlaJogador : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        diretor = GameObject.FindObjectOfType<Diretor>();
     }
     private void Update()
     {
@@ -25,5 +27,12 @@ public class ControlaJogador : MonoBehaviour
     {
         this.rb.velocity = Vector2.zero;
         this.rb.AddForce(Vector2.up * this.forcaPulo, ForceMode2D.Impulse);
+    }
+
+    private void OnCollisionEnter2D(Collision2D colisao)
+    {
+        this.rb.simulated = false;
+        Debug.Log("hit");
+        this.diretor.FinalizarJogo();
     }
 }

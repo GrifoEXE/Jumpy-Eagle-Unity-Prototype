@@ -9,9 +9,16 @@ public class ControlaObstaculo : MonoBehaviour
     [SerializeField]
     private float variacaoPosicaoY;
 
+    private ControlaInterface controlaInterface;
+
     private void Awake()
     {
         this.transform.Translate(Vector3.up * Random.Range(-variacaoPosicaoY, variacaoPosicaoY));
+    }
+
+    private void Start()
+    {
+        this.controlaInterface = GameObject.FindObjectOfType<ControlaInterface>();
     }
     // Update is called once per frame
     void Update()
@@ -25,11 +32,16 @@ public class ControlaObstaculo : MonoBehaviour
         {
             this.Destruir();
         }
+
+        if (trigger.CompareTag("Jogador"))
+        {
+            this.controlaInterface.AddPontos();
+        }
     }
 
     private void Destruir()
     {
-        Debug.Log("Hit");
         Destroy(this.gameObject);
     }
+
 }
