@@ -794,6 +794,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1642410550}
   - component: {fileID: 1642410549}
+  - component: {fileID: 1642410551}
   m_Layer: 0
   m_Name: Audio
   m_TagString: Untagged
@@ -813,7 +814,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.7
+  m_Volume: 0.24
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -912,6 +913,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1642410551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642410548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faa6314fde3dfe346a13891b1c917bc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1710049811 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8586868472703064943, guid: 4dc9ace054e3e0240b302315436516d7, type: 3}
@@ -1134,6 +1147,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 605122507252397231, guid: 2c580202095eddd4caba0f338c7ed71a, type: 3}
+      propertyPath: somHit
+      value: 
+      objectReference: {fileID: 8300000, guid: 32f01fb0b24052a4d8e7c2fd49d980b4, type: 3}
+    - target: {fileID: 605122507252397231, guid: 2c580202095eddd4caba0f338c7ed71a, type: 3}
+      propertyPath: somPulo
+      value: 
+      objectReference: {fileID: 8300000, guid: 996679a7c9395f6468c1fdd5cf81c820, type: 3}
     - target: {fileID: 4083416090675263997, guid: 2c580202095eddd4caba0f338c7ed71a, type: 3}
       propertyPath: m_Name
       value: Jogador

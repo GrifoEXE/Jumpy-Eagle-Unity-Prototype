@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class ControlaAudio : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    private AudioSource audioSource;
+    public static AudioSource instancia;
+
+    // Aware runs before start is
+    void Awake()
     {
-        
+        audioSource = GetComponent<AudioSource>();
+        instancia = audioSource;
     }
 }

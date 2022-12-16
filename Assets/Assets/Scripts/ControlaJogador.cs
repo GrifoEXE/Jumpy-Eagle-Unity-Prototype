@@ -8,6 +8,12 @@ public class ControlaJogador : MonoBehaviour
     private Diretor diretor;
 
     [SerializeField]
+    private AudioClip somPulo;
+
+    [SerializeField]
+    private AudioClip somHit;
+
+    [SerializeField]
     private float forcaPulo;
 
     private void Awake()
@@ -25,12 +31,14 @@ public class ControlaJogador : MonoBehaviour
 
     private void Pular()
     {
+        ControlaAudio.instancia.PlayOneShot(somPulo);
         this.rb.velocity = Vector2.zero;
         this.rb.AddForce(Vector2.up * this.forcaPulo, ForceMode2D.Impulse);
     }
 
     private void OnCollisionEnter2D(Collision2D colisao)
     {
+        ControlaAudio.instancia.PlayOneShot(somHit);
         this.rb.simulated = false;
         Debug.Log("hit");
         this.diretor.FinalizarJogo();

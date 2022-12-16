@@ -50,6 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidadeObstaculo: 5
   variacaoPosicaoY: 1
+  somPonto: {fileID: 8300000, guid: 3e4016f813784064ea82f996ab5ff539, type: 3}
 --- !u!50 &4418712196142638555
 Rigidbody2D:
   serializedVersion: 4

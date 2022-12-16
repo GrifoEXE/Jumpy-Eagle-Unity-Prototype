@@ -8,6 +8,8 @@ public class ControlaObstaculo : MonoBehaviour
     private float velocidadeObstaculo = 0.01f;
     [SerializeField]
     private float variacaoPosicaoY;
+    [SerializeField]
+    private AudioClip somPonto;
 
     private ControlaInterface controlaInterface;
 
@@ -33,8 +35,9 @@ public class ControlaObstaculo : MonoBehaviour
             this.Destruir();
         }
 
-        if (trigger.CompareTag("Jogador"))
+        if (trigger.CompareTag("Jogador")) //ponto ao jogador
         {
+            ControlaAudio.instancia.PlayOneShot(somPonto);
             this.controlaInterface.AddPontos();
         }
     }
