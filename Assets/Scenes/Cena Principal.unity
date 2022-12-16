@@ -220,6 +220,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &352247993 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4083416090675263997, guid: 2c580202095eddd4caba0f338c7ed71a, type: 3}
+  m_PrefabInstance: {fileID: 4083416090544952868}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &352247999
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352247993}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f2f9bc5f59bf054ab54dabd9e0e42bb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &408706363
 GameObject:
   m_ObjectHideFlags: 0
@@ -740,7 +765,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 13.625, y: 0}
-  m_SizeDelta: {x: 290.75, y: 155.1}
+  m_SizeDelta: {x: 186.3601, y: 135.9619}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1612107554
 MonoBehaviour:
@@ -766,7 +791,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: b37837a73ff95544b8d75d54844e5271, type: 3}
     m_FontSize: 145
     m_FontStyle: 1
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 9
     m_MaxSize: 203
     m_Alignment: 3
