@@ -16,6 +16,8 @@ public class ControlaJogador : MonoBehaviour
     [SerializeField]
     private float forcaPulo;
 
+    private bool impulsionar;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -25,6 +27,13 @@ public class ControlaJogador : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
+            impulsionar = true;
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (this.impulsionar) {
             this.Pular();
         }
     }
@@ -34,6 +43,7 @@ public class ControlaJogador : MonoBehaviour
         ControlaAudio.instancia.PlayOneShot(somPulo);
         this.rb.velocity = Vector2.zero;
         this.rb.AddForce(Vector2.up * this.forcaPulo, ForceMode2D.Impulse);
+        impulsionar = false;
     }
 
     private void OnCollisionEnter2D(Collision2D colisao)

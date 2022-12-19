@@ -18,6 +18,17 @@ public class ControlaInterface : MonoBehaviour
 
     public void ResetPontos()
     {
-        //aaa
+        this.pontos = 0;
+        this.textoPontos.text = this.pontos.ToString();
+    }
+
+    public void SalvarPontuacao()
+    {
+        int recordeAtual = PlayerPrefs.GetInt("recorde");
+        if (this.pontos > recordeAtual)
+        {
+            PlayerPrefs.SetInt("recorde", this.pontos);
+        }
+        
     }
 }
