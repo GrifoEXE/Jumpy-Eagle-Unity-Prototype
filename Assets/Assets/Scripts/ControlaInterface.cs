@@ -5,29 +5,29 @@ using UnityEngine.UI;
 
 public class ControlaInterface : MonoBehaviour
 {
-    private int pontos;
+    public int Pontos { get; private set; }
     [SerializeField]
     private Text textoPontos;
 
 
     public void AddPontos()
     {
-        pontos += 1;
-        textoPontos.text = pontos.ToString();
+        Pontos += 1;
+        textoPontos.text = Pontos.ToString();
     }
 
     public void ResetPontos()
     {
-        this.pontos = 0;
-        this.textoPontos.text = this.pontos.ToString();
+        this.Pontos = 0;
+        this.textoPontos.text = this.Pontos.ToString();
     }
 
     public void SalvarPontuacao()
     {
         int recordeAtual = PlayerPrefs.GetInt("recorde");
-        if (this.pontos > recordeAtual)
+        if (this.Pontos > recordeAtual)
         {
-            PlayerPrefs.SetInt("recorde", this.pontos);
+            PlayerPrefs.SetInt("recorde", this.Pontos);
         }
         
     }

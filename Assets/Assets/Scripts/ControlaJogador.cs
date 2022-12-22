@@ -18,10 +18,13 @@ public class ControlaJogador : MonoBehaviour
 
     private bool impulsionar;
 
+    private Animator animacao;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         diretor = GameObject.FindObjectOfType<Diretor>();
+        animacao = GetComponent<Animator>();
     }
     private void Update()
     {
@@ -29,6 +32,7 @@ public class ControlaJogador : MonoBehaviour
         {
             impulsionar = true;
         }
+        this.animacao.SetFloat("VelocidadeY", rb.velocity.y);
     }
 
     private void FixedUpdate()
@@ -50,7 +54,6 @@ public class ControlaJogador : MonoBehaviour
     {
         ControlaAudio.instancia.PlayOneShot(somHit);
         this.rb.simulated = false;
-        Debug.Log("hit");
         this.diretor.FinalizarJogo();
     }
 }
